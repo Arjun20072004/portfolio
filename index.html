@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">ARJUN BOMMISHETTI</h1>
+      <nav>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <ul id="nav" class="nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <h2>Full Stack Developer & Designer</h2>
+      <p>I build clean, responsive web experiences.</p>
+      <a href="#projects" class="btn">See projects</a>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About</h3>
+      <p>I'm a full-stack developer passionate about building scalable software and solving real-world problems.I like to make ideas into reality with the power of web technologies.</p>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h3>Projects</h3>
+      <div class="grid">
+        <article class="card">
+          <img class="thumb" src="assets/project1.svg" alt="Project One thumbnail">
+          <h4>Project One</h4>
+          <p>Interactive dashboard with charts and filters.</p>
+          <p class="card-links">
+            <a href="#" class="view-link" data-img="assets/project1.svg" data-title="Project One" data-desc="Interactive dashboard with charts and filters." data-live="#" data-git="#">Preview</a>
+            <a href="#" target="_blank" rel="noopener">Live</a>
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="assets/project2.svg" alt="Project Two thumbnail">
+          <h4>Project Two</h4>
+          <p>Marketing site with custom animations and CMS integration.</p>
+          <p class="card-links">
+            <a href="#" class="view-link" data-img="assets/project2.svg" data-title="Project Two" data-desc="Marketing site with custom animations and CMS integration." data-live="#" data-git="#">Preview</a>
+            <a href="#" target="_blank" rel="noopener">Live</a>
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="assets/project3.svg" alt="Project Three thumbnail">
+          <h4>Project Three</h4>
+          <p>Mobile-first web app with offline support and PWA features.</p>
+          <p class="card-links">
+            <a href="#" class="view-link" data-img="assets/project3.svg" data-title="Project Three" data-desc="Mobile-first web app with offline support and PWA features." data-live="#" data-git="#">Preview</a>
+            <a href="#" target="_blank" rel="noopener">Live</a>
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <form id="contact-form">
+        <label>
+          <span class="sr-only">Name</span>
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          <span class="sr-only">Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          <span class="sr-only">Message</span>
+          <textarea name="message" rows="5" placeholder="Message"></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 ARJUN BOMMISHETTI</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <img id="modal-img" src="" alt="">
+      <div class="modal-meta">
+        <h4 id="modal-title"></h4>
+        <p id="modal-desc"></p>
+        <p class="project-links"><a id="modal-live" href="#" target="_blank" rel="noopener">Live</a> · <a id="modal-git" href="#" target="_blank" rel="noopener">Code</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
