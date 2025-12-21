@@ -1,115 +1,218 @@
+<!-- FULL UPGRADED PORTFOLIO CODE PACKAGE -->
+
+<!-- ======================= -->
+<!-- index.html (MAIN FILE) -->
+<!-- ======================= -->
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>My Portfolio</title>
+  <title>Arjun Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="brand">ARJUN BOMMISHETTI</h1>
-      <nav>
-        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
-        <ul id="nav" class="nav">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-area">
+      <!-- Custom AB Tech Gradient Logo -->
+      <svg width="40" height="40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="brand-logo">
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00c6ff"/>
+            <stop offset="100%" stop-color="#0072ff"/>
+          </linearGradient>
+        </defs>
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="110" font-weight="700" fill="url(#grad)">AB</text>
+      </svg>
     </div>
-  </header>
 
-  <main>
-    <section id="hero" class="hero container">
-      <h2>Full Stack Developer & Designer</h2>
-      <p>I build clean, responsive web experiences.</p>
-      <a href="#projects" class="btn">See projects</a>
-    </section>
+    <nav>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <ul id="nav" class="nav">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.pdf" target="_blank" class="resume-btn">Resume</a></li>
+      </ul>
+    </nav>
 
-    <section id="about" class="container about">
-      <h3>About</h3>
-      <p>I'm a full-stack developer passionate about building scalable software and solving real-world problems.I like to make ideas into reality with the power of web technologies.</p>
-    </section>
-
-    <section id="projects" class="container projects">
-      <h3>Projects</h3>
-      <div class="grid">
-        <article class="card">
-          <img class="thumb" src="assets/project1.svg" alt="Project One thumbnail">
-          <h4>Project One</h4>
-          <p>Interactive dashboard with charts and filters.</p>
-          <p class="card-links">
-            <a href="#" class="view-link" data-img="assets/project1.svg" data-title="Project One" data-desc="Interactive dashboard with charts and filters." data-live="#" data-git="#">Preview</a>
-            <a href="#" target="_blank" rel="noopener">Live</a>
-            <a href="#" target="_blank" rel="noopener">Code</a>
-          </p>
-        </article>
-
-        <article class="card">
-          <img class="thumb" src="assets/project2.svg" alt="Project Two thumbnail">
-          <h4>Project Two</h4>
-          <p>Marketing site with custom animations and CMS integration.</p>
-          <p class="card-links">
-            <a href="#" class="view-link" data-img="assets/project2.svg" data-title="Project Two" data-desc="Marketing site with custom animations and CMS integration." data-live="#" data-git="#">Preview</a>
-            <a href="#" target="_blank" rel="noopener">Live</a>
-            <a href="#" target="_blank" rel="noopener">Code</a>
-          </p>
-        </article>
-
-        <article class="card">
-          <img class="thumb" src="assets/project3.svg" alt="Project Three thumbnail">
-          <h4>Project Three</h4>
-          <p>Mobile-first web app with offline support and PWA features.</p>
-          <p class="card-links">
-            <a href="#" class="view-link" data-img="assets/project3.svg" data-title="Project Three" data-desc="Mobile-first web app with offline support and PWA features." data-live="#" data-git="#">Preview</a>
-            <a href="#" target="_blank" rel="noopener">Live</a>
-            <a href="#" target="_blank" rel="noopener">Code</a>
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="container contact">
-      <h3>Contact</h3>
-      <form id="contact-form">
-        <label>
-          <span class="sr-only">Name</span>
-          <input type="text" name="name" placeholder="Your name" required>
-        </label>
-        <label>
-          <span class="sr-only">Email</span>
-          <input type="email" name="email" placeholder="you@example.com" required>
-        </label>
-        <label>
-          <span class="sr-only">Message</span>
-          <textarea name="message" rows="5" placeholder="Message"></textarea>
-        </label>
-        <button type="submit" class="btn">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 ARJUN BOMMISHETTI</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-backdrop"></div>
-    <div class="modal-content" role="dialog" aria-modal="true">
-      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
-      <img id="modal-img" src="" alt="">
-      <div class="modal-meta">
-        <h4 id="modal-title"></h4>
-        <p id="modal-desc"></p>
-        <p class="project-links"><a id="modal-live" href="#" target="_blank" rel="noopener">Live</a> · <a id="modal-git" href="#" target="_blank" rel="noopener">Code</a></p>
-      </div>
-    </div>
+    <button id="theme-toggle" class="theme-toggle">●</button>
   </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="hero" class="hero container fade-in">
+    
+    <h2>I am <span id="typewriter"></span></h2>
+    <p>Building fast, scalable, and user-focused applications end to end.</p>
+    <a href="#projects" class="btn">Explore Projects</a>
+    
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container about fade-in-up">
+    <h3>About</h3>
+<div class="about-wrapper" style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap;flex-direction:row-reverse;">
+      <img src="arjun photo.jpg" alt="Arjun Photo" class="profile-pic" style="width:180px;height:180px;object-fit:cover;border-radius:50%;border:3px solid var(--accent);box-shadow:0 0 15px rgba(0,198,255,0.5);">
+
+    
+      <p style="flex:1;min-width:260px;">
+        I am a Computer Science student and full-stack developer passionate about building scalable
+        software and transforming ideas into production-ready applications. I love crafting clean UI,
+        efficient backend architectures, and solving real-world problems.
+      </p>
+    </div>
+
+    <style>
+      .profile-pic:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease;
+        box-shadow: 0 0 25px rgba(0,198,255,0.8);
+      }
+    </style>
+</section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="container skills fade-in-up">
+    <h3>Skills</h3>
+    <div class="skills-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">React</div>
+      <div class="skill-card">Node.js</div>
+      <div class="skill-card">Express</div>
+      <div class="skill-card">MongoDB</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">DSA</div>
+      <div class="skill-card">Git / GitHub</div>
+    </div>
+
+
+  <!-- HOME PAGE PROJECT PREVIEW -->
+  <section id="projects" class="container projects fade-in-up">
+    <h3>Featured Projects</h3>
+    <div class="grid">
+
+      <article class="card">
+        <img class="thumb" src="assets/project1.svg" alt="Locato">
+        <h4>Locato</h4>
+        <p>Location-based tool for discovering nearby services with a clean UI.</p>
+        <p class="card-links">
+          <a href="#" target="_blank">Live</a>
+          <a href="#" target="_blank">Code</a>
+          <a href="projects.html" class="more-link">More</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="assets/project2.svg" alt="Dashboard">
+        <h4>Analytics Dashboard</h4>
+        <p>Interactive dashboard with charts, filters, and a modern UI.</p>
+        <p class="card-links">
+          <a href="#">Live</a>
+          <a href="#">Code</a>
+          <a href="projects.html" class="more-link">More</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="assets/project3.svg" alt="PWA App">
+        <h4>PWA Web App</h4>
+        <p>Offline-first mobile web app with caching and fast loading.</p>
+        <p class="card-links">
+          <a href="#">Live</a>
+          <a href="#">Code</a>
+          <a href="projects.html" class="more-link">More</a>
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container contact fade-in-up">
+    <h3>Contact</h3>
+    <form id="contact-form" method="POST" action="/submit-form">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="you@example.com" required>
+      <textarea name="message" rows="5" placeholder="Message"></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+
+    <!-- SOCIAL ICONS -->
+     
+    <style>
+      .social-icon svg {transition: transform .25s, filter .25s;}
+      .social-icon:hover svg {transform: scale(1.25); filter: drop-shadow(0 0 6px var(--accent));}
+      .social-icon {background: rgba(255,255,255,0.05); padding: 10px; border-radius: 50%; display: flex; align-items: center; justify-content: center;}
+      .social-row {display: flex; gap: 1rem; margin-top: 1rem;}
+      footer .footer-social {margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;}
+    
+      /* PULSE ANIMATION */
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.15); }
+        100% { transform: scale(1); }
+      }
+
+      /* Apply pulse to all social icons */
+      .social-icon {
+        animation: pulse 2s infinite ease-in-out;
+      }
+
+      /* Buttons also pulse */
+      .btn {
+        animation: pulse 2.5s infinite ease-in-out;
+      }
+
+      /* Hover pulse boost */
+      .social-icon:hover svg {
+        transform: scale(1.35) !important;
+      }
+
+    </style>
+
+  </section>
+
+  <!-- FOOTER SOCIAL ICONS -->
+  <div class="footer-social">
+    <div class="social-row">
+      <a href="https://www.linkedin.com/in/arjun-bommishetti-2k4" target="_blank" class="social-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.22 23H4.78V7.98H0.22V23ZM7.64 7.98H12.04V10.02H12.1C12.72 8.84 14.18 7.6 16.42 7.6C21.08 7.6 22 10.66 22 14.72V23H17.44V15.52C17.44 13.72 17.4 11.32 14.72 11.32C12 11.32 11.62 13.36 11.62 15.38V23H7.64V7.98Z" fill="var(--accent)"/>
+        </svg>
+      </a>
+
+      <a href="https://github.com/Arjun20072004" target="_blank" class="social-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="var(--accent)">
+          <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.55-3.88-1.55-.53-1.36-1.3-1.72-1.3-1.72-1.06-.74.08-.73.08-.73 1.17.09 1.78 1.22 1.78 1.22 1.04 1.79 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.55-.3-5.23-1.28-5.23-5.72 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.17 0 0 .97-.31 3.18 1.19a11.1 11.1 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.65.23 2.87.11 3.17.75.81 1.2 1.85 1.2 3.11 0 4.45-2.69 5.41-5.25 5.7.42.36.8 1.1.8 2.22v3.29c0 .31.21.68.8.56A10.99 10.99 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5Z"/>
+        </svg>
+      </a>
+
+      <a href="mailto:arjunbommishetti@gmail.com" class="social-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="var(--accent)">
+          <path d="M12 13.065L0 6V5l12 7 12-7v1l-12 7.065ZM0 8v11h24V8l-12 7L0 8Z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 ARJUN BOMMISHETTI.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
