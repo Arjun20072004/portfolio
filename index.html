@@ -133,7 +133,7 @@
           <a href="projects.html" class="more-link">More</a>
         </p>
       </article>
-      <<div class="show-more-wrapper">
+      <div class="show-more-wrapper">
   <a href="projects.html" class="show-more-btn">Show More Projects</a>
 </div>
 
@@ -142,14 +142,31 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="container contact fade-in-up">
+   <section id="contact" class="container contact fade-in-up">
     <h3>Contact</h3>
-    <form id="contact-form" method="POST" action="/submit-form">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="you@example.com" required>
-      <textarea name="message" rows="5" placeholder="Message"></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
+  <form 
+  id="contact-form"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSfPnat3c7PievmsEJEo86ujFYX4d3z9kdv-BcJnwMyN7eqMVg/formResponse"
+  method="POST"
+  target="hidden_iframe"
+  onsubmit="submitted=true;"
+>
+  <input type="text" name="entry.1063320332" placeholder="Your Name" required>
+  <input type="email" name="entry.2060447470" placeholder="Your Email" required>
+  <textarea name="entry.388140900" rows="5" placeholder="Your Message" required></textarea>
+
+  <button type="submit" class="btn">Send</button>
+</form>
+
+<iframe 
+  name="hidden_iframe" 
+  style="display:none;" 
+  onload="notifySuccess()">
+</iframe>
+
+
+
+
 
     <!-- SOCIAL ICONS -->
      

@@ -9,14 +9,6 @@ menuToggle.addEventListener("click", () => {
 document.getElementById("theme-toggle").onclick = () =>
   document.body.classList.toggle("light");
 
-// CONTACT FORM
-document.getElementById("contact-form")?.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = new FormData(e.target).get("name");
-  alert("Thanks for reaching out, " + name + ".");
-  e.target.reset();
-});
-
 // TYPEWRITER EFFECT
 const words = ["a Full-Stack Developer", "a Designer", "a Problem Solver"];
 let i = 0, j = 0, deleting = false;
@@ -41,7 +33,7 @@ setInterval(() => {
   }
 }, 120);
 
-// SCROLL ANIMATION TRIGGER
+// SCROLL ANIMATION
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) entry.target.classList.add("visible");
@@ -49,3 +41,37 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 document.querySelectorAll(".fade-in-up").forEach((el) => observer.observe(el));
+
+// GOOGLE FORM SUBMISSION SUCCESS HANDLER
+var submitted = false;
+
+function notifySuccess() {
+  if (submitted) {
+    alert("Message sent successfully! Thank you.");
+
+    // Clear fields after submit
+    document.getElementById("contact-form").reset();
+
+    submitted = false;
+  }
+}
+
+// EMAIL VALIDATION BEFORE SUBMIT
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  const emailField = document.querySelector("input[name='entry.2060447470']");
+  const email = emailField.value.trim();
+
+  // Basic valid email regex rule
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email)) {
+    e.preventDefault();  // Stop the form from submitting
+    submitted = false;   // Prevent success popup
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  // allow Google Form submission
+  submitted = true;
+});
+
