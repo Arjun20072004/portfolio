@@ -206,3 +206,28 @@ html {
   transform: scale(1.07);
   opacity: 0.85;
 }
+
+/* Error message */
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 4px;
+  display: none;
+}
+
+/* Invalid email input */
+input.invalid {
+  border: 2px solid #ff4d4d !important;
+  background: rgba(255, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+/* Fade animation */
+.fade-in-error {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}

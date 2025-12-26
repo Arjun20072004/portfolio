@@ -1,9 +1,3 @@
-<!-- FULL UPGRADED PORTFOLIO CODE PACKAGE -->
-
-<!-- ======================= -->
-<!-- index.html (MAIN FILE) -->
-<!-- ======================= -->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -63,9 +57,7 @@
 
     
       <p style="flex:1;min-width:260px;">
-        I am a full-stack developer passionate about building scalable
-        software and transforming ideas into production-ready applications. I love crafting clean UI,
-        efficient backend architectures, and solving real-world problems.
+        I specialize in building responsive interfaces, scalable backend systems, and end-to-end web applications that are both functional and visually engaging. I enjoy turning ideas into polished digital products by blending technical precision with creative problem-solving. My work focuses on performance, usability, and clean architecture, while also exploring modern design principles to ensure every project feels intuitive and enjoyable to use. I continuously learn, experiment, and refine my skills to deliver software that is reliable, maintainable, and impactful.
       </p>
     </div>
 
@@ -151,9 +143,10 @@
   target="hidden_iframe"
   onsubmit="submitted=true;"
 >
-  <input type="text" name="entry.1063320332" placeholder="Your Name" required>
-  <input type="email" name="entry.2060447470" placeholder="Your Email" required>
-  <textarea name="entry.388140900" rows="5" placeholder="Your Message" required></textarea>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" id="email-field" placeholder="Your Email" required>
+  <p id="email-error" class="error-message">Please enter a valid email address.</p>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
   <button type="submit" class="btn">Send</button>
 </form>

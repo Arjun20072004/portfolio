@@ -55,23 +55,27 @@ function notifySuccess() {
     submitted = false;
   }
 }
-
 // EMAIL VALIDATION BEFORE SUBMIT
 document.getElementById("contact-form").addEventListener("submit", function (e) {
-  const emailField = document.querySelector("input[name='entry.2060447470']");
+
+  const emailField = document.getElementById("email-field");
+  const emailError = document.getElementById("email-error");
   const email = emailField.value.trim();
 
-  // Basic valid email regex rule
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!emailPattern.test(email)) {
-    e.preventDefault();  // Stop the form from submitting
-    submitted = false;   // Prevent success popup
-    alert("Please enter a valid email address.");
+    e.preventDefault();              // Stop the form
+    submitted = false;               // Stop success popup
+    emailField.classList.add("invalid");
+    emailError.style.display = "block";
+    emailError.classList.add("fade-in-error");
     return;
   }
 
-  // allow Google Form submission
-  submitted = true;
-});
+  // If valid email, remove error UI and submit
+  emailField.classList.remove("invalid");
+  emailError.style.display = "none";
 
+  submitted = true; // Allow Google Form submit
+});
