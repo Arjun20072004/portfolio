@@ -1,3 +1,4 @@
+
 /* VARIABLES */
 :root{
   --bg:#0f1724;
@@ -178,4 +179,30 @@ input,textarea{
 @media(max-width:700px){
   .modal-content{flex-direction:column;align-items:center;}
   .modal-content img{max-width:100%;}
+}
+html {
+  scroll-padding-top: 60px; /* adjust based on your header height */
+}
+.show-more-wrapper {
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.show-more-btn {
+  padding: 12px 28px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.show-more-btn:hover {
+  transform: scale(1.07);
+  opacity: 0.85;
 }
